@@ -9,6 +9,13 @@ ognl demo演示Arthas里的 watch表达式工作流程。用户可以参考修�
 ./mvnw compile exec:java
 ```
 
+代码里的表达式：
+
+```java
+        String watchExpress = "{target, params, returnObj, #cost}";
+        String conditionExpress = "params[0] > 1 && #cost > 0.1";
+```
+
 结果：
 
 ```bash
@@ -48,6 +55,13 @@ AtExceptionExit, conditionExpress: params[0] > 1, conditionResult: true
 
 ```bash
 ./mvnw compile exec:java -DexceptionCase=true
+```
+
+代码里的表达式：
+
+```java
+        String watchExpress = "{target, params, throwExp}";
+        String conditionExpress = "params[0] > 1";
 ```
 
 结果：
