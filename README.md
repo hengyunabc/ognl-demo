@@ -6,7 +6,7 @@ ognl demo演示Arthas里的 watch表达式工作流程。用户可以参考修�
 ### 演示正常运行
 
 ```bash
-./mvnw exec:java
+./mvnw compile exec:java
 ```
 
 结果：
@@ -47,7 +47,7 @@ AtExceptionExit, conditionExpress: params[0] > 1, conditionResult: true
 ### 演示抛出异常
 
 ```bash
-./mvnw exec:java -DexceptionCase=true
+./mvnw compile exec:java -DexceptionCase=true
 ```
 
 结果：
